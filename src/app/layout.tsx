@@ -17,11 +17,11 @@ const sans = Manrope({
 export const metadata: Metadata = {
   title: "Crifer | Canvas Portfolio",
   description:
-    "Crifer's in-progress portfolio for HandoffOS and personal-site, presented with a magazine-inspired Canvas interface.",
+    "Crifer's in-progress portfolio for HandoffOS and OmniAgent-Studio, presented with a magazine-inspired Canvas interface.",
   openGraph: {
     title: "Crifer | Canvas Portfolio",
     description:
-      "In-progress projects including HandoffOS and personal-site, presented with Canvas motion and editorial layout.",
+      "In-progress projects including HandoffOS and OmniAgent-Studio, presented with Canvas motion and editorial layout.",
     type: "website",
   },
 };

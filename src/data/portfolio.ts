@@ -29,7 +29,7 @@ export const profile: Profile = {
   role: "Creative Developer / Product Builder",
   location: "China / Remote",
   intro:
-    "正在完善 HandoffOS 与个人作品集，把产品思考、工程实现和视觉叙事整理成可持续迭代的项目资产。",
+    "正在完善 HandoffOS 与 OmniAgent-Studio，把产品思考、工程实现和视觉叙事整理成可持续迭代的项目资产。",
   availability: "Building in public / In progress",
   email: "2830795495@qq.com",
   socialLinks: [
@@ -42,8 +42,8 @@ export const profile: Profile = {
       href: "https://github.com/acrifer/HandoffOS",
     },
     {
-      label: "Personal Site Repo",
-      href: "https://github.com/acrifer/personal-site",
+      label: "OmniAgent-Studio",
+      href: "https://github.com/acrifer/OmniAgent-Studio",
     },
   ],
 };
@@ -61,14 +61,14 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: "Personal Site",
+    title: "OmniAgent-Studio",
     year: "2026",
-    category: "Portfolio",
+    category: "Agent Tooling",
     status: "In progress / GitHub only",
     summary:
-      "这个作品集站点本身也是正在迭代的前端项目，使用 Next.js、TypeScript、Tailwind 和 Canvas 构建杂志感个人展示页。",
-    stack: ["Next.js", "TypeScript", "Canvas"],
-    href: "https://github.com/acrifer/personal-site",
+      "一个正在完善中的智能体工作台项目，当前先展示 GitHub 仓库入口和迭代状态，后续再补充完整功能说明与线上演示。",
+    stack: ["Java", "Agent", "Studio"],
+    href: "https://github.com/acrifer/OmniAgent-Studio",
     featured: true,
   },
 ];
