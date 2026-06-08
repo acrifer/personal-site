@@ -96,7 +96,7 @@ export default function Home() {
             Selected Work
           </p>
           <h2 className="font-display text-balance text-5xl font-medium leading-[0.95] tracking-normal sm:text-7xl lg:text-8xl">
-            A working archive of interfaces, systems and visual experiments.
+            Two in-progress repositories, tracked as a public build log.
           </h2>
         </div>
 
@@ -109,8 +109,10 @@ export default function Home() {
               rel="noreferrer"
               className="group cursor-pointer border-t border-[#16130f]/35 pt-5 transition-colors hover:border-[#b42318]"
             >
-              <div className="flex items-center justify-between gap-4 text-xs uppercase tracking-[0.26em] text-[#6f675c]">
+              <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 text-xs uppercase tracking-[0.26em] text-[#6f675c]">
                 <span>{String(index + 1).padStart(2, "0")}</span>
+                <span>{project.category}</span>
+                <span>{project.status}</span>
                 <span>{project.year}</span>
               </div>
               <h3 className="font-display mt-6 text-5xl font-medium leading-none tracking-normal sm:text-6xl">
@@ -129,7 +131,7 @@ export default function Home() {
                   </span>
                 ))}
                 <span className="ml-auto inline-flex items-center gap-2 text-sm font-semibold text-[#b42318]">
-                  Open
+                  Repository
                   <ArrowUpRight
                     size={17}
                     aria-hidden="true"
@@ -141,35 +143,37 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="mt-16 border-y border-[#16130f]/25">
-          {archiveProjects.map((project, index) => (
-            <a
-              key={project.title}
-              href={project.href}
-              target="_blank"
-              rel="noreferrer"
-              className="group grid cursor-pointer gap-5 border-b border-[#16130f]/20 py-6 transition-colors last:border-b-0 hover:text-[#b42318] md:grid-cols-[0.12fr_0.28fr_1fr_0.18fr]"
-            >
-              <span className="text-xs uppercase tracking-[0.26em] text-[#6f675c]">
-                {String(index + featuredProjects.length + 1).padStart(2, "0")}
-              </span>
-              <span className="text-sm uppercase tracking-[0.2em] text-[#6f675c]">
-                {project.category}
-              </span>
-              <span className="font-display text-3xl leading-none tracking-normal sm:text-4xl">
-                {project.title}
-              </span>
-              <span className="flex items-center justify-between gap-4 text-sm uppercase tracking-[0.18em] text-[#6f675c] md:justify-end">
-                {project.year}
-                <ExternalLink
-                  size={16}
-                  aria-hidden="true"
-                  className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                />
-              </span>
-            </a>
-          ))}
-        </div>
+        {archiveProjects.length > 0 && (
+          <div className="mt-16 border-y border-[#16130f]/25">
+            {archiveProjects.map((project, index) => (
+              <a
+                key={project.title}
+                href={project.href}
+                target="_blank"
+                rel="noreferrer"
+                className="group grid cursor-pointer gap-5 border-b border-[#16130f]/20 py-6 transition-colors last:border-b-0 hover:text-[#b42318] md:grid-cols-[0.12fr_0.28fr_1fr_0.18fr]"
+              >
+                <span className="text-xs uppercase tracking-[0.26em] text-[#6f675c]">
+                  {String(index + featuredProjects.length + 1).padStart(2, "0")}
+                </span>
+                <span className="text-sm uppercase tracking-[0.2em] text-[#6f675c]">
+                  {project.category}
+                </span>
+                <span className="font-display text-3xl leading-none tracking-normal sm:text-4xl">
+                  {project.title}
+                </span>
+                <span className="flex items-center justify-between gap-4 text-sm uppercase tracking-[0.18em] text-[#6f675c] md:justify-end">
+                  {project.year}
+                  <ExternalLink
+                    size={16}
+                    aria-hidden="true"
+                    className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  />
+                </span>
+              </a>
+            ))}
+          </div>
+        )}
       </section>
 
       <section
@@ -183,9 +187,9 @@ export default function Home() {
         </div>
         <div className="px-5 py-10 sm:px-8 lg:px-12 lg:py-16">
           <p className="font-display max-w-5xl text-balance text-4xl font-medium leading-[1.02] tracking-normal sm:text-6xl">
-            I shape placeholder ideas into launchable surfaces: structured
-            content, precise front-end systems, and expressive motion that still
-            respects performance.
+            I turn unfinished project ideas into visible systems: public
+            repositories, structured handoff, precise front-end surfaces, and
+            clear iteration notes.
           </p>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {["Strategy", "Interface", "Delivery"].map((item, index) => (
@@ -215,8 +219,8 @@ export default function Home() {
           </h2>
           <div>
             <p className="text-xl leading-8 text-[#423d35]">
-              这是一版可上线的占位作品集。把真实姓名、项目链接和简介替换到数据文件后，
-              页面结构和动效可以继续沿用。
+              当前展示的两个项目都在完善中，暂时只提供 GitHub 仓库入口，
+              不标注独立线上演示。后续项目完成后可以直接补充部署链接和案例详情。
             </p>
             <div className="mt-8 grid gap-3">
               {contactLinks.map((link) => (
@@ -228,10 +232,10 @@ export default function Home() {
                   className="group flex min-h-12 cursor-pointer items-center justify-between rounded-[8px] border border-[#16130f]/25 px-4 py-3 font-semibold transition-colors hover:border-[#b42318] hover:text-[#b42318] focus:outline-none focus:ring-2 focus:ring-[#b42318] focus:ring-offset-2 focus:ring-offset-[#f4efe4]"
                 >
                   <span className="inline-flex items-center gap-2">
-                    {link.label === "GitHub" ? (
-                      <GitBranch size={17} aria-hidden="true" />
-                    ) : (
+                    {link.href.startsWith("mailto:") ? (
                       <Mail size={17} aria-hidden="true" />
+                    ) : (
+                      <GitBranch size={17} aria-hidden="true" />
                     )}
                     {link.label}
                   </span>
